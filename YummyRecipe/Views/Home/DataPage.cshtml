@@ -1,0 +1,37 @@
+﻿@model YummyRecipe.Models.SampleRecipe
+@{
+    ViewData["Title"] = "Recipe List";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h2>Recipe List goes here.</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="col border border-secondary">Name</th>
+                <th class="col border border-secondary">Main Ingredient</th>
+                <th class="col border border-secondary">Durations(Mins)</th>
+                <th class="col border border-secondary">Category</th>
+                <th class="col border border-secondary">Recipe</th>
+                <th class="col border border-secondary">Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-secondary">@Model.Name</td>
+                <td class="border border-secondary">@Model.Main_Ingredient</td>
+                <td class="border border-secondary">@Model.Durations</td>
+                <td class="border border-secondary">@Model.Category</td>
+                <td class="border border-secondary"><a asp-action="DisplayPage">See Recipe</a></td>     
+                <td class="border border-secondary"><a asp-action="UserPage">Write Review</a></td> 
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
